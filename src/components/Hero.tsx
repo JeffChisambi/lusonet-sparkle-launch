@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-holographic.jpg";
 import aiShapes from "@/assets/ai-shapes.jpg";
 
@@ -45,13 +46,15 @@ const Hero = () => {
               </div>
 
               {/* CTA Button */}
-              <Button 
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 text-base group"
-              >
-                Get started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link to="/get-started">
+                <Button 
+                  size="lg"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 text-base group"
+                >
+                  Get started
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
 
             {/* Right Content - Hero Image */}
